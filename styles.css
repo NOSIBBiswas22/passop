@@ -1,0 +1,417 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px 20px 0 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 160vh;
+    margin: 1vh 29vh 0 29vh;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #4a4a4a;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    margin-top: 6px;
+}
+
+h2 {
+    color: #333;
+}
+
+a, a:visited{
+    text-decoration: none;
+    color: #615d5d;
+
+}
+
+.form-section {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    height: 33vh;
+    background-color: #fafafa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #5cb85c;
+    outline: none;
+}
+
+button, .closebtn {
+    padding: 12px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+button:hover, .closebtn:hover {
+    background-color: #4cae4c;
+}
+
+.service-list {
+    width: 48%;
+    height: 76vh;
+    background-color: #fafafa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow-y: scroll;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border-radius: 8px;
+    margin: 10px 0;
+    background: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+li:hover {
+    transform: translateY(-2px);
+}
+
+li > div {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+}
+
+button, .closebtn {
+    width: 80px; /* Set a uniform width for buttons */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+button.edit-btn {
+    background-color: #5cb85c;
+}
+
+button.edit-btn:hover {
+    background-color: #448444;
+}
+
+button.view-btn {
+    background-color: #5cb85c;
+}
+
+button.view-btn:hover {
+    background-color: #448444;
+}
+
+button.delete-btn {
+    background-color: #d9534f;
+    color: white;
+}
+
+button.delete-btn:hover {
+    background-color: #c9302c;
+}
+.addService, .closebtn{
+    width: 100%;
+}
+
+footer {
+    text-align: center;
+    margin-top: 9px;
+    font-size: 16px;
+    color: #888;
+    padding: 10px;
+    background: #f0f0f0;
+    border-top: 3px solid #ccc;
+}
+
+/* Style the password container */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
+
+.password-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+
+#password {
+    width: 100%;
+    padding-right: 40px; /* Make space for the eye icon */
+    box-sizing: border-box;
+}
+
+#togglePassword {
+    position: absolute;
+    font-size: 1.25em;
+    right: 17px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+    display: none; /* Hide the eye icon by default */
+}
+
+/* Show the icon when the password input is focused or hovered */
+.password-container:hover #togglePassword,
+#password:focus + #togglePassword {
+    display: block;
+}
+
+/* infoBox (background) */
+.infoBox {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for better contrast */
+}
+
+.infoBox.visible {
+    display: block; /* Show when the visible class is added */
+    /* Optionally add a fade-in transition */
+    transition: opacity 0.3s ease;
+}
+
+/* infoBox Content */
+.infoBox-content {
+    background-color: white;
+    font-size: 16px;
+    margin: auto;
+    padding: 30px; /* Increased padding for a more spacious look */
+    border-radius: 12px; /* More pronounced rounded corners */
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2); /* Softer shadow for depth */
+}
+
+/* Modal Header */
+.infoBox-header {
+    font-weight: bold;
+    font-size: 1.5em; /* Larger font size for better readability */
+    color: #00796b; /* Teal color for header */
+    margin-bottom: 20px;
+    text-align: center; /* Center header text */
+}
+.info-head{
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 14px;
+}
+
+/* Close Button */
+.close-btn {
+    color: #494545; /* Bright red color */
+    float: right;
+    font-size: 1.7em;
+    cursor: pointer;
+}
+
+/* Modal Buttons */
+.infoBox .button {
+    background-color: #00796b; /* Teal button */
+    color: white;
+    border: none;
+    padding: 12px 20px; /* More padding for buttons */
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.1em;
+    margin: 10px 0;
+    width: calc(100% - 20px); /* Adjusted width for padding */
+}
+
+.infoBox .button:hover {
+    background-color: #004d40; /* Darker teal on hover */
+}
+
+/* Centered buttons inside the infoBox */
+.infoBox .button-container {
+    display: flex;
+    justify-content: space-between; /* Space between buttons */
+    flex-direction: column;
+}
+
+.infoBox .button-container-horizontal {
+    flex-direction: row; /* Arrange buttons horizontally */
+    justify-content: center;
+}
+
+.infoBox .button-container-horizontal .button {
+    width: 200px; /* Fixed width for horizontal buttons */
+    margin-right: 10px; /* Space between buttons */
+}
+
+.infoBox .button-container-horizontal .button:last-child {
+    margin-right: 0; /* No margin for the last button */
+}
+
+.infoBox .button.shift-right {
+    margin-left: auto; /* Align button to the right */
+    width: 200px; /* Fixed width */
+}
+
+/* Modal Form Labels */
+.infoBox .form-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #333; /* Darker color for labels */
+}
+
+/* Modal Form Values */
+.infoBox .form-value {
+    background-color: #fafafa; /* Light background for form values */
+    padding: 10px;
+    border: 1px solid #ccc; /* Light border for visibility */
+    border-radius: 5px;
+    margin-bottom: 15px;
+    color: #333; /* Darker color for text */
+    cursor: not-allowed; /* No interaction allowed */
+}
+
+/* Modal Icon (if needed) */
+.infoBox .modal-header i {
+    font-size: 40px; /* Size for the icon */
+    color: #c9302c; /* Red color for the icon */
+    display: block;
+    margin: 0 auto 10px; /* Center icon with margin */
+}
+
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.modal-header {
+    font-weight: bold;
+    font-size: 17px;
+    color: #00796b;
+    margin-bottom: 20px;
+    text-align: center; /* Center header text */
+}
+
+.close {
+    color: #333;
+    float: right;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.button {
+    background-color: #00796b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.1em;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.button:hover {
+    background-color: #004d40;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.button-container-horizontal {
+    flex-direction: row;
+    justify-content: center;
+}
+
+.button-container-horizontal .button {
+    width: 200px;
+    margin-right: 10px;
+}
+
+.button-container-horizontal .button:last-child {
+    margin-right: 0;
+}
+
+.button.shift-right {
+    margin-left: auto;
+    width: 200px;
+}
+
+.modal-header i {
+    font-size: 40px;
+    color: #c9302c;
+    display: block;
+    margin: 0 auto 10px;
+}
