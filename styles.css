@@ -415,3 +415,110 @@ input[type="password"]::-ms-clear {
     display: block;
     margin: 0 auto 10px;
 }
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+
+@media (max-width: 870px) {
+    /* Adjust the container size */
+    body {
+        padding: 5px 5px 0 5px;
+    }
+
+    .container {
+        margin: 1vh 1vh; /* Reduce margin for small screens */
+        max-width: 90vh;  /* Reduce width to fit smaller screens */
+        padding: 15px;    /* Reduce padding */
+    }
+
+    /* Change flex direction to column for form-section */
+    .form-section {
+        flex-direction: column; /* Stack the form and the service list */
+    }
+
+    /* Adjust the form width */
+    form, .service-list {
+        width: 100%; /* Take full width on mobile */
+        margin-bottom: 20px; /* Add spacing between form and service list */
+        height: auto; /* Adjust height for mobile responsiveness */
+    }
+
+    /* Adjust the service list height */
+    .service-list {
+        height: auto; /* Make it flexible based on content */
+        max-height: 60vh; /* Set a max-height to prevent overflow */
+    }
+
+    /* Adjust the footer size and spacing */
+    footer {
+        font-size: 14px; /* Slightly reduce the font size */
+        margin-top: 20px; /* Increase top margin */
+    }
+
+    /* Make buttons and inputs more mobile-friendly */
+    input, button {
+        padding: 8px; /* Reduced padding for compact buttons */
+        font-size: 0.9em; /* Slightly smaller font size */
+    }
+
+    /* Adjust the toggle icon position in password container */
+    .password-container #togglePassword {
+        right: 10px; /* Slightly move the icon to fit mobile screens */
+        font-size: 14px;
+    }
+    li{
+        flex-direction: column;
+    }
+
+    /* Adjust the buttons inside the list for mobile */
+    li > div {
+        display: flex;
+        flex-direction: row; /* Stack buttons vertically on mobile */
+        gap: 8px; /* Smaller space between buttons */
+        width: 100%; /* Full width for better mobile layout */
+    }
+
+    li span {
+        font-family: sans-serif;
+        font-weight: 300;
+        font-size: 18px;
+    }
+
+    /* Make buttons narrower and reduce padding for mobile */
+    button.edit-btn, button.view-btn, button.delete-btn {
+        width: 90%; /* Slightly narrower buttons for better fit */
+        padding: 10px; /* Reduced padding for compact size */
+        font-size: 0.9em; /* Slightly smaller text size */
+    }
+
+    /* Reduce hover effect intensity on mobile for better experience */
+    button.edit-btn:hover, button.view-btn:hover, button.delete-btn:hover {
+        transform: none; /* Remove transform effect for mobile */
+    }
+
+    /* Adjust button colors for better visibility on mobile */
+    button.edit-btn, button.view-btn {
+        background-color: #5cb85c; /* Keep green for Edit and View */
+    }
+
+    button.edit-btn:hover, button.view-btn:hover {
+        background-color: #4cae4c; /* Slightly darker green on hover */
+    }
+
+    button.delete-btn {
+        background-color: #d9534f; /* Red for delete button */
+        color: white;
+    }
+
+    button.delete-btn:hover {
+        background-color: #c9302c; /* Darker red on hover */
+    }
+}
+
