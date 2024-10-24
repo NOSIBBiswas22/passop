@@ -143,3 +143,29 @@ togglePassword.addEventListener('click', function() {
     this.classList.toggle('fa-eye');
     this.classList.toggle('fa-eye-slash');
 });
+
+// Function to filter services
+function filterServices() {
+    let searchQuery = document.getElementById('searchService').value.toLowerCase();
+    let services = document.querySelectorAll('#serviceList li');
+
+    services.forEach(function(service) {
+        let serviceName = service.querySelector('span').textContent.toLowerCase();
+        if (serviceName.includes(searchQuery)) {
+            service.style.display = ''; // Show service if it matches
+        } else {
+            service.style.display = 'none'; // Hide service if it doesn't match
+        }
+    });
+}
+
+// Event listener for input field
+document.getElementById('searchService').addEventListener('input', filterServices);
+
+// Event listener for "Enter" keypress
+document.getElementById('searchService').addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault();  // Prevent the default form submission
+        filterServices();        // Call the filter function when Enter is pressed
+    }
+});
