@@ -19,7 +19,7 @@ PASS<OP> is a user-friendly password manager designed to securely store, manage,
 - **Responsive Design:** Adapts to different screen sizes for mobile, tablet, and desktop.
 
 ## Live Demo
-Website: (https://nosibbiswas22.github.io/modal/)
+[![Visit PASS<OP>](https://img.shields.io/badge/Visit-PASS%3COP%3E-brightgreen)](https://nosibbiswas22.github.io/passop/)
 
 
 ## Table of Contents
