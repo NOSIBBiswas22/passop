@@ -218,8 +218,8 @@ function updateService(index) {
 
     // Check if the new values are the same as the existing values
     if (
-        name === existingService.name &&
-        email === existingService.email &&
+        name === existingService.name ||
+        email === existingService.email ||
         password === existingService.password
     ) {
         // Show a notification if no changes were made
