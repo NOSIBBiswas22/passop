@@ -4,7 +4,7 @@
 ![Static Badge](https://img.shields.io/badge/version-1.0.1-red)
 ---
 
-PASS<OP> is a user-friendly password manager designed to securely store, manage, and retrieve your passwords across multiple platforms. It features a dynamic and responsive UI, allowing for intuitive interaction and security.
+PASSOP is a user-friendly password manager designed to securely store, manage, and retrieve your passwords across multiple platforms. It features a dynamic and responsive UI, allowing for intuitive interaction and security.
 
 [![Download PASS<OP>](https://img.shields.io/badge/Download-PASS%3COP%3E-brightgreen)](https://github.com/NOSIBBiswas22/PASSOP/archive/refs/heads/main.zip)
 
