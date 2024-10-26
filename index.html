@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <!-- Add this to your HTML body -->
+    <div id="notification" class="notification">
+        <!-- Dynamic Content Goes Here -->
+    </div>
+
     <!-- Modal HTML -->
     <div id="modal"></div>
 
@@ -26,18 +31,22 @@
         <h1>PASS&lt;OP&gt;</h1>
         <div class="form-section">
             <form id="serviceForm">
+                <h3>Add Service</h3>
                 <input type="text" id="serviceName" placeholder="Service Name" required>
                 <input type="email" id="email" placeholder="Email" required>
                 <div class="password-container">
-                    <input type="password" id="password" placeholder="Password" required>
-                    <i class="fas fa-eye" id="togglePassword"></i>
+                    <input type="password" class="password" id="password" placeholder="Password" required>
+                    <i class="fas fa-eye toggle-password" id="togglePassword"></i>
                 </div>
                 <button type="submit" class="addService">Add Service</button>
             </form>
 
-            <div class="service-list">
-                <h2>Saved Services</h2>
-                <input type="text" id="searchService" placeholder="Search services..." class="search-input">
+            <div class="saved-services">
+                <div class="search-container">
+                    <h3>Saved Services</h3>
+                    <input type="text" id="searchService" placeholder="Search services..." class="search-input">
+                    <i id="searchIcon" class="fas fa-search searchIcon"></i>
+                </div>
                 <ul id="serviceList"></ul>
             </div>
         </div>
