@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!-- coding by Nosib Biswas -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&lt;PASSOP/&gt; - Password Manager || Nosib Biswas</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Add this to your HTML body -->
+    <div id="notification" class="notification">
+      <!-- Dynamic Content Goes Here -->
+    </div>
+
+    <!-- Modal HTML -->
+    <div id="modal"></div>
+
+    <!-- infoBox container -->
+    <div id="infoBox" class="infoBox">
+      <div class="infoBox-content">
+        <span class="close-btn" id="closeinfoBox" onclick="closeInfoBox()"
+          >&times;</span
+        >
+        <div id="infoBoxBody">
+          <!-- Dynamic Content Goes Here -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h1>&lt;PASSOP/&gt;</h1>
+      <div class="form-section">
+        <form id="serviceForm">
+          <h3>Add Service</h3>
+          <input
+            type="text"
+            id="serviceName"
+            placeholder="Service Name"
+            required
+          />
+          <input type="email" id="email" placeholder="Email" required />
+          <div class="password-container">
+            <input
+              type="password"
+              class="password"
+              id="password"
+              placeholder="Password"
+              required
+            />
+            <i class="fas fa-eye toggle-password" id="togglePassword"></i>
+          </div>
+          <button type="submit" class="addService">Add Service</button>
+        </form>
+
+        <div class="saved-services">
+          <div class="search-container">
+            <h3>Saved Services</h3>
+            <input
+              type="text"
+              id="searchService"
+              placeholder="Search services..."
+              class="search-input"
+            />
+            <i id="searchIcon" class="fas fa-search searchIcon"></i>
+          </div>
+          <ul id="serviceList"></ul>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <a href="https://nosibbiswas22.github.io/nosibbiswas/"
+        ><p>
+          Copyright &copy; 2024 Developed by Nosib Biswas. All rights reserved.
+        </p></a
+      >
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="assets/js/modal.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
