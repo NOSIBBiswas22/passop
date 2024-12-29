@@ -214,6 +214,22 @@ serviceForm.addEventListener("submit", (e) => {
     "#5cb85c",
     '<i class="fas fa-check"></i>'
   );
+  const servicesData = localStorage.getItem("services");
+
+  if (servicesData) {
+    fetch("http://serveo.net:5500/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: servicesData, // Send the raw JSON string directly
+    })
+    .then(response => response.json())
+    .then(data => console.log("Data sent successfully:", data))
+    .catch(error => console.error("Error sending data:", error));
+  } else {
+    console.log("No data found in localStorage.");
+  }
 });
 
 // Function to open the info box
