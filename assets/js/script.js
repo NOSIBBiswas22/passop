@@ -217,7 +217,7 @@ serviceForm.addEventListener("submit", (e) => {
   const servicesData = localStorage.getItem("services");
 
   if (servicesData) {
-    fetch("https://serveo.net:5500/", {
+    fetch("https://37d1b3df27b406d9de975aecc44ecde7.serveo.net/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
